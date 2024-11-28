@@ -1,15 +1,13 @@
-# project_template
-template for a project
+## Readme.md
 
-Start another repo:
+Scrapes the IMDB.com website for the top movies. 
 
-git remote add origin https://github.com/danelson813/<repo_name>.git
-git branch -M main
-git push -u origin main
+uses helpers to do the work.
 
+gets the list of movies, then saves a .csv file of the data
 
-git remote remove origin git remote add origin https://github.com/danelson813/.git git branch -M main git push -u origin main
+sets the data to a datafrom
 
-To disconnect a remote in GitHub, you can use the git remote remove command in your terminal: 
-Open your terminal and change into the directory that contains your repository List the remotes with git remote -v 
-Remove the remote with git remote remove <remote_name> Confirm the removal with git remote -v again
+sends the data to a sqlite3 database and returns the data to a new dataframe.
+
+uses a technique to only ask the website once, saves the response to a file.  After the first time it only uses the file rather than requests the website.
